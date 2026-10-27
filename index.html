@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exeltede. - Kantin Kejujuran & Sejarah Koperasi</title>
+    
+    <!-- Google Fonts untuk nuansa Snoopy/Playful -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Konfigurasi Tema Warna -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1F3563',
+                        cyan: '#54C8F5',
+                        hijau: '#8FD35A',
+                        khaki: '#D8C9A0',
+                        putih: '#FFFFFF',
+                        hitam: '#2F3136',
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'snoopy': '6px 6px 0px 0px rgba(47, 49, 54, 1)', // Efek bayangan kartun tebal
+                        'snoopy-sm': '3px 3px 0px 0px rgba(47, 49, 54, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles tambahan */
+        body {
+            background-color: #FFFFFF;
+            color: #2F3136;
+        }
+        
+        /* Styling untuk border tebal ala komik/snoopy */
+        .comic-border {
+            border: 3px solid #2F3136;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-putih selection:bg-cyan selection:text-putih">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-khaki comic-border border-b-4 shadow-snoopy-sm top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#halaman1">
+                        <img src="img/logo-exeltede.png" alt="exeltede." class="h-32 md:h-40 object-contain p-1">
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6 items-center font-bold text-navy">
+                    <a href="#halaman1" class="hover:text-cyan transition-colors">Kantin Kejujuran</a>
+                    <a href="#halaman2" class="hover:text-cyan transition-colors">Sejarah</a>
+                    <a href="#halaman3" class="hover:text-cyan transition-colors">Galeri Poster</a>
+                    <a href="#halaman4" class="hover:text-cyan transition-colors">Hasil Voting</a>
+                    <a href="#halaman5" class="bg-hijau text-hitam px-5 py-2 rounded-full comic-border shadow-snoopy-sm hover:-translate-y-1 hover:shadow-snoopy transition-all">Kontak</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-hitam hover:text-navy focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-khaki border-t-2 border-hitam absolute w-full font-bold">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="#halaman1" class="block px-3 py-2 text-navy hover:bg-white hover:text-cyan rounded-md">Kantin Kejujuran</a>
+                <a href="#halaman2" class="block px-3 py-2 text-navy hover:bg-white hover:text-cyan rounded-md">Sejarah</a>
+                <a href="#halaman3" class="block px-3 py-2 text-navy hover:bg-white hover:text-cyan rounded-md">Galeri Poster</a>
+                <a href="#halaman4" class="block px-3 py-2 text-navy hover:bg-white hover:text-cyan rounded-md">Hasil Voting</a>
+                <a href="#halaman5" class="block px-3 py-2 text-hijau hover:bg-white rounded-md">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Halaman 1: Kantin Kejujuran -->
+    <section id="halaman1" class="pt-32 pb-20 bg-putih min-h-screen flex items-center relative overflow-hidden">
+        <!-- Dekorasi Awan (Snoopy Vibe) -->
+        <div class="absolute top-24 left-10 text-cyan opacity-20"><i class="fas fa-cloud text-6xl"></i></div>
+        <div class="absolute top-40 right-20 text-cyan opacity-20"><i class="fas fa-cloud text-8xl"></i></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h1 class="text-5xl md:text-6xl font-black text-navy mb-6 leading-tight">
+                        Apa itu <br> <span class="text-cyan text-stroke">Kantin Kejujuran?</span>
+                    </h1>
+                    
+                    <div class="bg-khaki rounded-3xl p-6 md:p-8 comic-border shadow-snoopy mb-6">
+                        <h3 class="text-2xl font-bold text-hitam mb-3 flex items-center">
+                            <i class="fas fa-book-open text-hijau mr-3"></i> Pengertian
+                        </h3>
+                        <p class="text-lg font-medium text-hitam">
+                            Kantin Kejujuran adalah sebuah fasilitas di lingkungan sekolah yang beroperasi tanpa adanya kasir atau penjaga. Siswa melayani diri sendiri mulai dari mengambil makanan, membayar ke dalam kotak uang yang disediakan, hingga mengambil uang kembalian sendiri secara jujur.
+                        </p>
+                    </div>
+
+                    <div class="bg-cyan text-putih rounded-3xl p-6 md:p-8 comic-border shadow-snoopy">
+                        <h3 class="text-2xl font-bold text-hitam mb-3 flex items-center">
+                            <i class="fas fa-bullseye text-hijau mr-3"></i> Tujuan
+                        </h3>
+                        <ul class="text-lg font-bold text-hitam space-y-2 list-disc list-inside">
+                            <li>Melatih karakter kejujuran siswa sejak dini.</li>
+                            <li>Menanamkan nilai-nilai luhur anti-korupsi.</li>
+                            <li>Membangun kemandirian dan rasa tanggung jawab.</li>
+                            <li>Menciptakan lingkungan sekolah yang saling percaya.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2 flex justify-center">
+                    <!-- Placeholder Visual Kantin Kejujuran -->
+                    <div class="relative group">
+                        <img src="img/snoopy1.jpg" alt="Ilustrasi Kantin Kejujuran" class="rounded-full w-80 h-80 md:w-[450px] md:h-[450px] object-cover comic-border shadow-snoopy transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute -bottom-6 -right-6 bg-hijau text-hitam font-bold p-4 rounded-2xl comic-border shadow-snoopy-sm rotate-12">
+                            Ayo Jujur! 🌟
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 2: Sejarah Koperasi -->
+    <section id="halaman2" class="py-20 bg-navy text-putih relative">
+        <!-- Dekorasi garis bergelombang -->
+        <div class="absolute top-0 w-full overflow-hidden leading-none transform -translate-y-full">
+            <svg class="relative block w-[calc(100%+1.3px)] h-[50px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.29,22.38,107.57,47.78,168.14,57.17,219.98,65.23,272.84,65.62,321.39,56.44Z" class="fill-navy"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-black text-center text-cyan mb-16 underline decoration-hijau decoration-8 underline-offset-8">
+                Jejak Sejarah
+            </h2>
+
+            <div class="space-y-16">
+                <!-- Sejarah Dunia -->
+                <div class="bg-putih text-hitam rounded-[3rem] p-8 md:p-12 comic-border shadow-snoopy flex flex-col md:flex-row items-center gap-8 relative">
+                    <div class="absolute -top-6 -left-6 bg-cyan w-16 h-16 rounded-full comic-border flex items-center justify-center shadow-snoopy-sm">
+                        <i class="fas fa-globe-americas text-3xl text-putih"></i>
+                    </div>
+                    <div class="w-full md:w-1/3">
+                        <img src="img/dunia-kop.jpg" alt="Sejarah Dunia" class="rounded-3xl comic-border w-full shadow-snoopy-sm">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-3xl font-black text-navy mb-4">Sejarah Dunia</h3>
+                        <p class="text-lg font-medium leading-relaxed">
+                         Koperasi modern lahir di Rochdale, Inggris, pada tahun 1844 saat 28 pekerja mendirikan Rochdale Society of Equitable Pioneers untuk menghadapi dampak buruk Revolusi Industri. Mereka menerapkan prinsip keadilan, keterbukaan, dan pembagian keuntungan yang menjadi cikal bakal gerakan koperasi global di bawah naungan International Co-operative Alliance (ICA).                        </p>
+                    </div>
+                </div>
+
+                <!-- Sejarah Indonesia -->
+                <div class="bg-khaki text-hitam rounded-[3rem] p-8 md:p-12 comic-border shadow-snoopy flex flex-col md:flex-row-reverse items-center gap-8 relative">
+                    <div class="absolute -top-6 -right-6 bg-hijau w-16 h-16 rounded-full comic-border flex items-center justify-center shadow-snoopy-sm">
+                        <i class="fas fa-map-marked-alt text-3xl text-hitam"></i>
+                    </div>
+                    <div class="w-full md:w-1/3">
+                        <img src="img/kop-ind.jpg" alt="Sejarah Indonesia" class="rounded-3xl comic-border w-full shadow-snoopy-sm">
+                    </div>
+                    <div class="w-full md:w-2/3 text-left md:text-right">
+                        <h3 class="text-3xl font-black text-navy mb-4">Sejarah Indonesia</h3>
+                        <p class="text-lg font-medium leading-relaxed">
+                            Gerakan koperasi di Indonesia dimulai pada tahun 1896 oleh R.A.A. Wiriaatmadja di Purwokerto melalui lembaga simpan pinjam untuk membantu rakyat dari jeratan rentenir. Perkembangan ini makin kuat pada masa pergerakan nasional hingga disahkannya UU Koperasi Pertama pada tahun 1927, dan dipuncakinya peran Mohammad Hatta (Bapak Koperasi Indonesia) yang mengokohkan koperasi dalam Pasal 33 UUD 1945 serta menetapkan Hari Koperasi pada 12 Juli 1947.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 3: Galeri Poster -->
+    <section id="halaman3" class="py-20 bg-cyan relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-black text-hitam mb-4 bg-putih inline-block px-8 py-3 rounded-full comic-border shadow-snoopy rotate-2">
+                    Galeri Poster Kelompok
+                </h2>
+                <p class="text-navy font-bold text-xl mt-6">Karya terbaik dari 6 kelompok hebat!</p>
+            </div>
+
+            <!-- Grid 6 Kolom -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card Poster 1 -->
+                <div class="bg-putih rounded-3xl comic-border shadow-snoopy overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="p-3 bg-navy border-b-3 border-hitam">
+                        <h4 class="text-putih font-black text-center text-xl">Kelompok 1</h4>
+                    </div>
+                    <div class="p-4 bg-gray-100 flex-grow">
+                        <img src="img/kel-1.png" alt="Poster 1" class="w-full h-auto rounded-xl comic-border object-cover aspect-[3/4]">
+                    </div>
+                    <div class="p-4 bg-hijau border-t-3 border-hitam min-h-[100px]">
+                        <p class="text-hitam font-bold text-sm text-center">
+                            <!-- Tempat penjelasan detail poster 1 -->
+                            "Merangkum lahirnya koperasi modern di Rochdale, Inggris (1844), serta perkembangannya di Indonesia mulai dari R.A.A. Wiriaatmadja (1896) hingga peran Bung Hatta sebagai Bapak Koperasi berbasis asas kekeluargaan."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Poster 2 -->
+                <div class="bg-putih rounded-3xl comic-border shadow-snoopy overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="p-3 bg-navy border-b-3 border-hitam">
+                        <h4 class="text-putih font-black text-center text-xl">Kelompok 2</h4>
+                    </div>
+                    <div class="p-4 bg-gray-100 flex-grow">
+                        <img src="img/kel-2.jpg" alt="Poster 2" class="w-full h-auto rounded-xl comic-border object-cover aspect-[3/4]">
+                    </div>
+                    <div class="p-4 bg-khaki border-t-3 border-hitam min-h-[100px]">
+                        <p class="text-hitam font-bold text-sm text-center">
+                            <!-- Tempat penjelasan detail poster 2 -->
+                            "Mengusung pesan "Korupsi Membunuh Keadilan" lewat simbol Dewi Keadilan dan tikus berdasi yang menggambarkan keserakahan serta penyalahgunaan kekuasaan."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Poster 3 -->
+                <div class="bg-putih rounded-3xl comic-border shadow-snoopy overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="p-3 bg-navy border-b-3 border-hitam">
+                        <h4 class="text-putih font-black text-center text-xl">Kelompok 3</h4>
+                    </div>
+                    <div class="p-4 bg-gray-100 flex-grow">
+                        <img src="img/kel-3.jpg" alt="Poster 3" class="w-full h-auto rounded-xl comic-border object-cover aspect-[3/4]">
+                    </div>
+                    <div class="p-4 bg-cyan border-t-3 border-hitam min-h-[100px]">
+                        <p class="text-hitam font-bold text-sm text-center">
+                            <!-- Tempat penjelasan detail poster 3 -->
+                            "Poster ini memaparkan evolusi pengolahan biji-bijian dari teknik menumbuk batu kuno hingga penggunaan kincir pada Abad Pertengahan,beragam variasi tepung untuk memenuhi kebutuhan pangan global."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Poster 4 -->
+                <div class="bg-putih rounded-3xl comic-border shadow-snoopy overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="p-3 bg-navy border-b-3 border-hitam">
+                        <h4 class="text-putih font-black text-center text-xl">Kelompok 4</h4>
+                    </div>
+                    <div class="p-4 bg-gray-100 flex-grow">
+                        <img src="img/kel-4.jpg" alt="Poster 4" class="w-full h-auto rounded-xl comic-border object-cover aspect-[3/4]">
+                    </div>
+                    <div class="p-4 bg-hijau border-t-3 border-hitam min-h-[100px]">
+                        <p class="text-hitam font-bold text-sm text-center">
+                            <!-- Tempat penjelasan detail poster 4 -->
+                            "Poster ini menjelaskan perjalanan sejarah koperasi Indonesia dari tahun 1896 hingga penetapan Bung Hatta sebagai Bapak Koperasi Indonesia. Koperasi terbukti menjadi alat perjuangan ekonomi rakyat yang berlandaskan asas kekeluargaan dan gotong royong."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Poster 5 -->
+                <div class="bg-putih rounded-3xl comic-border shadow-snoopy overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="p-3 bg-navy border-b-3 border-hitam">
+                        <h4 class="text-putih font-black text-center text-xl">Kelompok 5</h4>
+                    </div>
+                    <div class="p-4 bg-gray-100 flex-grow">
+                        <img src="img/kel-5.jpg" alt="Poster 5" class="w-full h-auto rounded-xl comic-border object-cover aspect-[3/4]">
+                    </div>
+                    <div class="p-4 bg-khaki border-t-3 border-hitam min-h-[100px]">
+                        <p class="text-hitam font-bold text-sm text-center">
+                            <!-- Tempat penjelasan detail poster 5 -->
+                            "Poster ini merangkum sejarah pemberantasan korupsi di Indonesia dari era Orde Lama hingga era Reformasi dan lahirnya KPK. Selain itu, terdapat pula informasi gerakan global Hakordia serta ajakan untuk menjauhi korupsi."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Poster 6 -->
+                <div class="bg-putih rounded-3xl comic-border shadow-snoopy overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+                    <div class="p-3 bg-navy border-b-3 border-hitam">
+                        <h4 class="text-putih font-black text-center text-xl">Kelompok 6</h4>
+                    </div>
+                    <div class="p-4 bg-gray-100 flex-grow">
+                        <img src="img/kel-6.jpg" alt="Poster 6" class="w-full h-auto rounded-xl comic-border object-cover aspect-[3/4]">
+                    </div>
+                    <div class="p-4 bg-cyan border-t-3 border-hitam min-h-[100px]">
+                        <p class="text-hitam font-bold text-sm text-center">
+                            <!-- Tempat penjelasan detail poster 6 -->
+                            "Poster ini menjelaskan sejarah cokelat dari peradaban Maya-Aztec hingga masuk ke Indonesia lewat bangsa Spanyol pada abad ke-16. Isi materi juga dilengkapi kutipan moral dari Bung Hatta serta latar belakang destinasi Wisata Edukasi Kampung Coklat."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 4: Hasil Voting -->
+    <section id="halaman4" class="py-24 bg-putih relative">
+        <!-- Dekorasi Background -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#1F3563_2px,transparent_2px)] [background-size:24px_24px]"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black text-center text-navy mb-12">
+                🏆 Hasil Voting Pameran 🏆
+            </h2>
+
+            <div class="bg-khaki comic-border shadow-snoopy rounded-[3rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
+                
+                <!-- Kolom Kiri: Presentase & Kelebihan -->
+                <div class="w-full md:w-5/12 space-y-8">
+                    <!-- Persentase Suara -->
+                    <div class="bg-putih rounded-3xl p-6 comic-border shadow-snoopy-sm transform -rotate-2">
+                        <h3 class="text-xl font-bold text-navy mb-2">Pemenang Voting!</h3>
+                        <div class="flex items-end gap-3">
+                            <span class="text-6xl font-black text-hijau drop-shadow-md">66%</span>
+                            <span class="text-lg font-bold text-hitam pb-2">Suara Kelas</span>
+                        </div>
+                    </div>
+
+                    <!-- Kelebihan Poster -->
+                    <div class="bg-navy text-putih rounded-3xl p-6 comic-border shadow-snoopy-sm">
+                        <h4 class="text-xl font-bold text-cyan mb-4 flex items-center">
+                            <i class="fas fa-star text-khaki mr-2"></i> Kelebihan Poster
+                        </h4>
+                        <ul class="space-y-3 font-medium text-lg">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-hijau mt-1 mr-3"></i>
+                                <span>Visual Pendukung yang Kuat.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-hijau mt-1 mr-3"></i>
+                                <span>Pesan sejarah tersampaikan dengan singkat, padat, dan jelas.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-hijau mt-1 mr-3"></i>
+                                <span>Penggunaan Palet Warna Harmonis.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Gambar Poster Pemenang -->
+                <div class="w-full md:w-7/12 relative group">
+                    <div class="absolute -inset-2 bg-cyan rounded-3xl comic-border opacity-50 blur-sm group-hover:opacity-100 transition-opacity"></div>
+                    <div class="relative bg-putih p-4 rounded-3xl comic-border shadow-snoopy h-full">
+                        <span class="absolute -top-5 -right-5 bg-hijau text-hitam font-black px-4 py-2 rounded-full comic-border shadow-snoopy-sm animate-bounce">
+                            #1 Terpilih!
+                        </span>
+                        <!-- Gambar Poster Pemenang (Dibuat sedikit lebih besar) -->
+                        <img src="img/kel-4.jpg" alt="Poster 4" alt="Poster Pemenang" class="w-full h-auto object-cover rounded-xl comic-border">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 5: Kontak & Footer -->
+    <section id="halaman5" class="py-20 bg-navy relative border-t-8 border-hitam">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                
+                <!-- Formulir Kontak -->
+                <div class="bg-putih p-8 rounded-3xl comic-border shadow-snoopy">
+                    <h3 class="text-3xl font-black text-navy mb-6">Kirim Pesan <i class="fas fa-paper-plane text-cyan"></i></h3>
+                    <form action="#" method="POST" class="space-y-4 font-bold text-hitam">
+                        <div>
+                            <label for="nama" class="block mb-1">Nama</label>
+                            <input type="text" id="nama" class="w-full px-4 py-3 rounded-xl bg-gray-100 comic-border focus:outline-none focus:ring-4 focus:ring-cyan focus:bg-putih transition-colors" placeholder="Masukkan nama kamu...">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-xl bg-gray-100 comic-border focus:outline-none focus:ring-4 focus:ring-cyan focus:bg-putih transition-colors" placeholder="nama@email.com">
+                        </div>
+                        <div>
+                            <label for="subjek" class="block mb-1">Subjek</label>
+                            <input type="text" id="subjek" class="w-full px-4 py-3 rounded-xl bg-gray-100 comic-border focus:outline-none focus:ring-4 focus:ring-cyan focus:bg-putih transition-colors" placeholder="Hal yang ingin dibicarakan...">
+                        </div>
+                        <div>
+                            <label for="pesan" class="block mb-1">Pesan</label>
+                            <textarea id="pesan" rows="4" class="w-full px-4 py-3 rounded-xl bg-gray-100 comic-border focus:outline-none focus:ring-4 focus:ring-cyan focus:bg-putih transition-colors" placeholder="Tulis pesanmu di sini..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-hijau hover:bg-cyan text-hitam font-black text-xl py-3 px-6 rounded-xl comic-border shadow-snoopy-sm hover:shadow-snoopy transition-all transform hover:-translate-y-1">
+                            Kirim Sekarang!
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info Kontak Langsung -->
+                <div class="flex flex-col justify-center text-putih space-y-10">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-black text-khaki mb-4 drop-shadow-md">Hubungi Kami!</h2>
+                        <p class="text-lg font-medium text-gray-300">
+                            Punya pertanyaan seputar proyek kantin kejujuran atau ingin berdiskusi soal sejarah? Jangan ragu untuk menghubungi kontak di bawah ini.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Email -->
+                        <a href="mailto:mirzazhfadil@gmail.com" class="flex items-center gap-4 group">
+                            <div class="w-14 h-14 bg-cyan rounded-full flex items-center justify-center comic-border shadow-snoopy-sm group-hover:-translate-y-1 transition-transform">
+                                <i class="fas fa-envelope text-2xl text-hitam"></i>
+                            </div>
+                            <span class="text-xl font-bold group-hover:text-cyan transition-colors">mirzazhfadil@gmail.com</span>
+                        </a>
+                        
+                        <!-- Telepon -->
+                        <a href="tel:089682176301" class="flex items-center gap-4 group">
+                            <div class="w-14 h-14 bg-hijau rounded-full flex items-center justify-center comic-border shadow-snoopy-sm group-hover:-translate-y-1 transition-transform">
+                                <i class="fas fa-phone-alt text-2xl text-hitam"></i>
+                            </div>
+                            <span class="text-xl font-bold group-hover:text-hijau transition-colors">089682176301</span>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/mirzaa.zh" target="_blank" class="flex items-center gap-4 group">
+                            <div class="w-14 h-14 bg-khaki rounded-full flex items-center justify-center comic-border shadow-snoopy-sm group-hover:-translate-y-1 transition-transform">
+                                <i class="fab fa-instagram text-3xl text-hitam"></i>
+                            </div>
+                            <span class="text-xl font-bold group-hover:text-khaki transition-colors">@mirzaa.zh</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-hitam text-center py-6 border-t-4 border-navy">
+        <p class="text-putih font-bold tracking-wide">
+            Copyright &copy; 2026 <a href="https://www.instagram.com/mirzaa.zh/" class="text-cyan hover:text-hijau transition-colors">@mirzaa.zh</a>. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- Script Interaktif Ringan -->
+    <script>
+        // Toggle Mobile Menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Menutup menu mobile ketika salah satu link diklik
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
